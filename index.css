@@ -39,6 +39,9 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  /*fixes spacing between items: changes from stretch
+  use to change spacing in cross-axis*/
+  align-content: flex-start;
   margin-top: 30px;
   margin-left: 15px;
   opacity: 0;
