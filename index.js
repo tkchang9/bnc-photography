@@ -5,6 +5,6 @@ function fadeEffect(targetId) {
 }
 
 window.onload = function() {
-  fadeEffect("leftBar");
-  setTimeout(function() {fadeEffect("rightContent")}, 600);
+  //fadeEffect("leftBar");
+  setTimeout(function() {fadeEffect("rightContent")}, 300);
 }
