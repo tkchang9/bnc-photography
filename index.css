@@ -3,20 +3,17 @@ html {
 }
 
 body {
-  display: flex;
   padding: 20px;
   margin: 0;
 }
 
 #leftBar {
+  position: fixed;
   border-right: 1px solid black;
-  text-align: right;
   padding-right: 15px;
+  text-align: right;
   margin-top: 100px;
-  /* use to maintain width w/ flex*/
-  flex-basis: 150px;
-  flex-grow: 0;
-  flex-shrink: 0;
+  width: 150px;
   height: 200px;
   opacity: 1;
 }
@@ -43,7 +40,7 @@ body {
   use to change spacing in cross-axis*/
   align-content: flex-start;
   margin-top: 30px;
-  margin-left: 15px;
+  margin-left: 180px;
   opacity: 0;
 }
 .cImage {
@@ -69,4 +66,34 @@ body {
 
 .text {
   margin: 10px;
+}
+
+@media screen and (max-width: 682px) {
+  #leftBar {
+    position: relative;
+    text-align: center;
+    padding-right: none;
+    border-right: none;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+  }
+  #leftBar #titleL {
+    font-size: 2em;
+    border-bottom: 1px solid black;
+  }
+  #leftBar li {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: 1px solid black;
+  }
+  #leftBar li:last-child {
+    border-right: none;
+  }
+
+  #rightContent {
+    justify-content: center;
+    margin-left: 0;
+  }
 }
