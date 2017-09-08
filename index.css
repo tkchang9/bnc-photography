@@ -18,9 +18,18 @@ body {
   flex-grow: 0;
   flex-shrink: 0;
   height: 200px;
+  opacity: 0;
 }
 #leftBar li {
   list-style: none;
+}
+#leftBar li a {
+  text-decoration: none;
+  color: inherit;
+  transition: .3s;
+}
+#leftBar li a:hover {
+  text-decoration: underline;
 }
 #leftBar #titleL {
   font-size: 1.5em;
@@ -32,6 +41,7 @@ body {
   flex-wrap: wrap;
   margin-top: 30px;
   margin-left: 15px;
+  opacity: 0;
 }
 .cImage {
   margin: 10px;
@@ -40,6 +50,18 @@ body {
   background-color: lightgrey;
   border: 1px solid black;
   overflow: hidden;
+}
+
+/* img hover effects - scale for zoom effect*/
+.cImage img {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+.cImage:hover img{
+  transform: scale(1.2);
+  opacity: .5;
 }
 
 .text {
